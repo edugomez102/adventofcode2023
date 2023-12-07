@@ -1,0 +1,10 @@
+
+main
+main_draft
+test
+*.o
+
+*.txt
+compile_commands.json
+
+.cache
