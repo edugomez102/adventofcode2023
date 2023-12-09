@@ -17,8 +17,8 @@ bool checkTwoBehind(std::string_view game, size_t i, unsigned int max) {
   return false;
 }
 
-std::pair<int, bool> p1::isGamePossible(std::string_view game) {
-  int id{0}; bool valid{true};
+std::pair<unsigned int, bool> p1::isGamePossible(std::string_view game) {
+  unsigned int id{0}; bool valid{true};
   std::size_t i {5};
   for (;i < game.size(); ++i) {
     if(game[i] == ':') break;
@@ -36,8 +36,8 @@ std::pair<int, bool> p1::isGamePossible(std::string_view game) {
   return {id, valid};
 }
 
-int p1::countValidGames(std::string_view filename) {
-  int total{0};
+unsigned int p1::countValidGames(std::string_view filename) {
+  unsigned int total{0};
   std::ifstream file{filename.data()};
   for(std::string line{}; std::getline(file, line);) {
     auto gp = p1::isGamePossible(line);

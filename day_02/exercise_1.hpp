@@ -3,9 +3,9 @@
 #include <string>
 
 namespace p1 {
-  std::pair<int, bool> isGamePossible(std::string_view game);
+  std::pair<unsigned int, bool> isGamePossible(std::string_view game);
 
-  int countValidGames(std::string_view filename);
+  unsigned int countValidGames(std::string_view filename);
 
 }
 
