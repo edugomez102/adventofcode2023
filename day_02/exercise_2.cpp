@@ -1,8 +1,7 @@
 #include "exercise_2.hpp"
-#include <fstream>
 
-//Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
-//          i
+#include <iostream>
+#include <fstream>
 
 unsigned int getColorNumber(std::string_view game, size_t i) {
   // check 0 - 1
@@ -43,4 +42,8 @@ unsigned int p2::countPowerOfGames(std::string_view filename) {
   for(std::string line{}; std::getline(file, line);)
     total += powerOfGame(line);
   return total;
+}
+
+int main() { 
+  std::cout << p2::countPowerOfGames("input.txt");
 }
