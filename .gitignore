@@ -1,6 +1,7 @@
 
 main
 main_draft
+app
 test
 *.o
 

@@ -1,5 +1,5 @@
 CC      := g++
-FLAGS   := -std=c++20 -g -fsanitize=address
+FLAGS   := -std=c++20 -O3 -I../utils
 
 test: test.cpp exercise
 	$(CC) -o test test.cpp exercise.o $(FLAGS) -lCatch2
